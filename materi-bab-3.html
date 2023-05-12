@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Template Mo">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <title>Materi - DDL</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/lightbox.css">
+<!--
+
+TemplateMo 569 Edu Meeting
+
+https://templatemo.com/tm-569-edu-meeting
+
+-->
+  </head>
+
+<body>
+
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+      <div class="container">
+          <div class="row">
+              <div class="col-12">
+                  <nav class="main-nav">
+                      <!-- ***** Logo Start ***** -->
+                      <a href="welcome.php" class="logo">
+                          Basis Data
+                      </a>
+                      <!-- ***** Logo End ***** -->
+                      <!-- ***** Menu Start ***** -->
+                      <ul class="nav">
+                        <li><a href="welcome.php">Home</a></li>
+                        <li><a href="materi.html" class="active">Materi</a></li>
+                        <li><a href="soal.html">Latihan Soal</a></li>
+                        <li><a href="about.html">Tentang Kami</a></li> 
+                        <li><a href="contact.php">Hubungi Kami</a></li> 
+                        <li><a href="logout.php">Log Out</a></li> 
+                      </ul>    
+                      <a class='menu-trigger'>
+                          <span>Menu</span>
+                      </a>
+                      <!-- ***** Menu End ***** -->
+                  </nav>
+              </div>
+          </div>
+      </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  <section class="meetings-page" id="meetings">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="meeting-single-item">
+                <div class="thumb">
+                  <a href="materi-bab-3.html"><h3>Materi Data Definition Language</h3></a><br>
+                   <small>Naila Febrianti | 14 November 2022</small>
+                  <a href="materi-bab-3.html"><img src="assets/images/m-2.png" alt=""></a>
+                </div>
+                <div class="down-content">
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="materi">
+                        <h5>Data Definition Language</h5>
+                          <p><b>DDL</b> (<i>Data Definition Language</i>) merupakan perintah SQL yang berhubungan dengan pendefinisian suatu database, dalam hal ini database dan table. 
+                            Beberapa perintah dasar yang termasuk DDL antara lain : <br>
+                          <ul>
+                            <li><b>Create</b> : Untuk membuat tabel atau database</li>
+                          <li><b>Drop</b> : Untuk menghapus tabel atau database</li>
+                            <li><b>Alter</b> : Untuk melakukan perubahan struktur tabel yang telah dibuat seperti
+                            menambah field (add), menghapus field (drop) dan lain-lain</li>
+                          </ul>
+                          </p>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-12">
+                      <div class="materiddl">
+                        <h5>Membuat Database</h5>
+                          <ol>
+                            <li>Membuat Database</li>
+                              <p>Sintaks umum SQL untuk membuat suatu database adalah sebagai berikut : <br>
+                              <mark><b>CREATE DATABASE nama_database;</b></mark><br>
+                                Aturan penamaan sebuah database sama seperti aturan penamaan sebuah variabel, dimana secara umum nama database boleh terdiri dari huruf, angka dan under-score (_). 
+                                Jika database yang akan dibuat sudah ada, maka akan muncul pesan error.
+                                Contoh perintah untuk membuat database baru dengan nama db_toko :<br>
+                                <b>create database db_toko;</b></p>
+                            <li>Mengaktifkan Database</li>
+                            <p>Sebelum melakukan manipulasi tabel dan record yang berada di dalamnya, 
+                              kita harus membuka atau mengaktifkan databasenya terlebih dahulu. 
+                              Untuk membuka database dapat menggunakan perintah sebagai berikut :<br>
+                            <mark><b>USE nama_database;</b></mark>
+                              </p>
+                          <li>Menampilkan Database</li>
+                          <p>Untuk melihat database yang sudah ada atau yang baru saja dibuat, dapat menggunakan perintah sebagai berikut :<br>
+                          <mark><b>show databases;</b></mark><br>
+                            <img src="assets/images/materi3-1.png" alt="materi">
+                            </p>
+                          </ol>
+                          </div>
+                      </div>
+
+                      <div class="col-lg-12">
+                        <div class="materiddl">
+                          <h5>Membuat Tabel</h5>
+                            <ol>
+                              <li>Membuat Tabel</li>
+                                <p>Bentuk umum perintah SQL untuk membuat suatu tabel secara sederhana sebagai berikut :<br>
+                                <mark><b>Create table nama_tabel ( field1 tipe(size), field2 tipe(size), PRIMARY KEY (field_key) );</b></mark><br>
+                                  <img src="assets/images/materi3-2.png" alt="materi">
+                                  <img src="assets/images/materi3-3.png" alt="materi">
+                                </p>
+                              <li>Menampilkan Tabel</li>
+                              <p>Untuk menampilkan daftar tabel yang sudah dibuat, dapat menggunakan perintah berikut :
+                                <br><mark><b>show tables;</b></mark><br>
+                                Perintah di atas akan menampilkan seluruh tabel yang sudah ada dalam suatu database.<br>
+                                <img src="assets/images/materi3-4.png" alt="materi">
+                                </p>
+                            </ol>
+                            </div>
+                        </div>
+                      
+                        <div class="col-lg-12">
+                          <div class="materiddl">
+                            <h5>Menampilkan Struktur Tabel</h5>
+                              <p>Untuk dapat melihat tipe data dan panjang record set pada tabel adalah dengan menampilkan struktur tabel. 
+                                Perintah yang digunakan untuk menampilkan struktur tabel adalah :<br>
+                              <mark><b>DESC nama_tabel;</b></mark> atau <mark><b>DESCRIBE nama_tabel;</b></mark><br>
+                                <img src="assets/images/materi3-5.png" alt="materi">
+                                </p>
+                              </ol>
+                              </div>
+                          </div>
+
+                          <div class="col-lg-12">
+                            <div class="materiddl">
+                              <h5>Menghapus Database dan Tabel</h5>
+                                <ol>
+                                  <li>Membuat Database</li>
+                                    <p>Untuk menghapus database yang sudah dibuat, dapat menggunakan perintah sebagai berikut :<br>
+                                    <mark><b>Drop database nama_tabel;</b></mark><br>
+                                      Jika databasenya ada maka database dan juga seluruh tabel di dalamnya akan dihapus. Jadi berhati-hatilah dengan perintah ini! 
+                                      Jika nama database yang akan dihapus tidak ditemukan, maka akan ditampilkan pesan error.
+                                    </p>
+                                  <li>Menghapus Tabel</li>
+                                  <p>Untuk menghapus sebuah tabel pada database, dapat menggunakan perintah sebagai berikut :
+                                    <br><mark><b>Drop table nama_tabel;</b></mark><br>
+                                    Contoh jika kita ingin menghapus tabel dengan nama “buku” maka perintah sql nya adalah<br>
+                                    <b>Drop table buku;</b>
+                                    </p>
+                                </ol>
+                                </div>
+                            </div>
+
+                    <div class="col-lg-12">
+                      <div class="materiddl">
+                        <h5>Mengubah Struktur Tabel</h5>
+                            <ol>
+                              <li>Menambah field pada tabel</li>
+                                    <p>Menambah field dapat diartikan sebagai langkah untuk menyisipkan field baru pada sebuah tabel. Untuk melakukan penambahan field maka alter option yang digunakan adalah ADD.  Perintah yang digunakan untuk menambah field pada tabel adalah<br>
+                                    <mark><b>Alter table nama_tabel add nama_field tipe data (size);</b></mark><br>
+                                      Contoh perintah untuk menambah field pada tabel :<br>
+                                      <b>Alter table film add jenis_film varchar (25);</b>
+                                    </p>
+                                  <li>Menghapus field pada tabel</li>
+                                  <p>Pada pembuatan database pasti terdapat kesalahan seperti pada field tabel yang berlebihan dan lain-lain. Untuk melakukan penghapusan field maka alter option yang digunakan adalah DROP. Perintah yang digunakan untuk menghapus field pada tabel adalah 
+                                    <br><mark><b>Alter table nama_tabel drop nama_field;</b></mark><br>
+                                    Contoh perintah untuk menghapus field pada tabel :<br>
+                                    <b>Alter table film drop jenis_film ;</b>
+                                    </p>
+                                    <li>Mengganti nama field</li>
+                                    <p>Jika terdapat kesalahan penulisan field dapat dirubah dengan menggunakan menggunakan alter option CHANGE. Perintah yang digunakan untuk mengganti nama field pada tabel adalah<br>
+                                    <mark><b>Alter table nama_tabel change field_lama field_baru tipe data;</b></mark><br>
+                                      Contoh perintah untuk mengganti field pada tabel :<br>
+                                      <b>Alter table film change judul judul_film varchar (25);</b>
+                                    </p>
+                                    <li>Mengganti tipe data</li>
+                                    <p>Jika terdapat kesalahan tipe data pada field dapat dirubah dengan menggunakan alter option MODIFY. Perintah yang digunakan untuk mengganti tipe data field pada tabel adalah <br>
+                                    <mark><b>Alter table nama_tabel modify nama_field tipe data;</b></mark><br>
+                                      Contoh perintah untuk mengganti field pada tabel :<br>
+                                      <b>Alter table film modify judul_film varchar (25);</b>
+                                    </p>
+                                  <li>Mengganti nama tabel</li>
+                                  <p>Untuk mengubah nama tabel dapat menggunakan alter option RENAME. Perintah yang digunakan untuk mengubah nama tabel adalah  
+                                    <br><mark><b>Alter table tabel_lama rename to tabel_baru;</b></mark> atau <mark><b>rename table tabel_lama to tabel_baru;</b></mark><br>
+                                    Contoh perintah untuk mengganti field pada tabel :<br>
+                                    <b>Alter table filem rename to film;<br>
+                                      Rename table filem to film;</b>
+                                    </p>
+                                    <li>Menambahkan primary key</li>
+                                    <p>Jika ingin menambah primary key pada suatu tabel dapat menggunakan alter dengan option ADD PRIMARY KEY. Perintah yang digunakan untuk menambahkan primary key adalah <br>
+                                      <mark><b>Alter table nama_tabel add primary key (nama_field);</b></mark><br>
+                                      Contoh perintah untuk menambahkan primary key pada tabel :<br>
+                                      <b>Alter table film add primary key (id_film);</b>
+                                    </p>
+                                    <li>Menghapus primary key</li>
+                                    <p>Jika ingin menghapus primary key pada suatu tabel dapat menggunakan alter dengan option DROP PRIMARY KEY. Perintah yang digunakan untuk menghapus primary key adalah <br>
+                                      <mark><b>ALTER TABLE nama_tabel DROP PRIMARY KEY;</b></mark><br>
+                                      Contoh perintah untuk menambahkan primary key pada tabel :<br>
+                                      <b>Alter table film drop primary key;</b>
+                                    </p>
+                            </ol>
+                          </div>
+                        </div>
+
+                  <!--Pembatas-->
+                    <div class="col-lg-12">
+                      <div class="share">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            <div class="col-lg-12">
+              <div class="main-button-red">
+                <a href="materi.html">Kembali</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <p>© Naila Febrianti PTI 19 A 2022 
+          <br>Website Pembelajaran Mata Pelajaran Basis Data </p>
+    </div>
+  </section>
+
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/isotope.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/lightbox.js"></script>
+    <script src="assets/js/tabs.js"></script>
+    <script src="assets/js/video.js"></script>
+    <script src="assets/js/slick-slider.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script>
+        //according to loftblog tut
+        $('.nav li:first').addClass('active');
+
+        var showSection = function showSection(section, isAnimate) {
+          var
+          direction = section.replace(/#/, ''),
+          reqSection = $('.section').filter('[data-section="' + direction + '"]'),
+          reqSectionPos = reqSection.offset().top - 0;
+
+          if (isAnimate) {
+            $('body, html').animate({
+              scrollTop: reqSectionPos },
+            800);
+          } else {
+            $('body, html').scrollTop(reqSectionPos);
+          }
+
+        };
+
+        var checkSection = function checkSection() {
+          $('.section').each(function () {
+            var
+            $this = $(this),
+            topEdge = $this.offset().top - 80,
+            bottomEdge = topEdge + $this.height(),
+            wScroll = $(window).scrollTop();
+            if (topEdge < wScroll && bottomEdge > wScroll) {
+              var
+              currentId = $this.data('section'),
+              reqLink = $('a').filter('[href*=\\#' + currentId + ']');
+              reqLink.closest('li').addClass('active').
+              siblings().removeClass('active');
+            }
+          });
+        };
+
+        $('.main-menu, .responsive-menu, .scroll-to-section').on('click', 'a', function (e) {
+          e.preventDefault();
+          showSection($(this).attr('href'), true);
+        });
+
+        $(window).scroll(function () {
+          checkSection();
+        });
+    </script>
+</body>
+
+
+  </body>
+
+</html>

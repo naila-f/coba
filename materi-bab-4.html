@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Template Mo">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <title>Materi - DML</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/lightbox.css">
+<!--
+
+TemplateMo 569 Edu Meeting
+
+https://templatemo.com/tm-569-edu-meeting
+
+-->
+  </head>
+
+<body>
+
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+      <div class="container">
+          <div class="row">
+              <div class="col-12">
+                  <nav class="main-nav">
+                      <!-- ***** Logo Start ***** -->
+                      <a href="welcome.php" class="logo">
+                          Basis Data
+                      </a>
+                      <!-- ***** Logo End ***** -->
+                      <!-- ***** Menu Start ***** -->
+                      <ul class="nav">
+                        <li><a href="welcome.php">Home</a></li>
+                        <li><a href="materi.html" class="active">Materi</a></li>
+                        <li><a href="soal.html">Latihan Soal</a></li>
+                        <li><a href="about.html">Tentang Kami</a></li> 
+                        <li><a href="contact.php">Hubungi Kami</a></li> 
+                        <li><a href="logout.php">Log Out</a></li> 
+                      </ul>    
+                      <a class='menu-trigger'>
+                          <span>Menu</span>
+                      </a>
+                      <!-- ***** Menu End ***** -->
+                  </nav>
+              </div>
+          </div>
+      </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  <section class="meetings-page" id="meetings">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="meeting-single-item">
+                <div class="thumb">
+                  <a href="materi-bab-4.html"><h3>Materi Data Manipulation Language</h3></a><br>
+                   <small>Naila Febrianti | 14 November 2022</small>
+                  <a href="materi-bab-4.html"><img src="assets/images/m-3.png" alt=""></a>
+                </div>
+                <div class="down-content">
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="materi">
+                        <h5>Data Manipulation Language</h5>
+                          <p><b>DML</b> (<i>Data Manipulation Language</i>) adalah kelompok perintah sql yang digunakan untuk memanipulasi data, misalnya untuk pengambilan, penyisipan pengubahan dan penghapusan data. 
+                            Tujuan perubahan tersebut adalah untuk mendapatkan data yang sesuai dengan lebutuhan pemakai (user). 
+                            Perintah sql yang termasuk dalam kelompok DML antara lain :
+                           <br>
+                          <ul>
+                            <li><b>Insert</b> : Untuk menampilkan atau mengambil sebuah data pada tabel</li>
+                            <li><b>Select</b> : Untuk mengubah atau mengedit data pada tabel</li>
+                            <li><b>Update</b> : Untuk melakukan perubahan struktur tabel yang telah dibuat seperti</li>
+                            <li><b>Delete</b> : Untuk menghapus sebuah data pada tabelmenambah field (add), menghapus field (drop) dan lain-lain</li>
+                          </ul>
+                          </p>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-12">
+                      <div class="materiddl">
+                        <h5>Menambah data</h5>
+                       <p>Memasukkan data atau menambah data pada mysql menggunakan perintah insert. Ada beberapa cara untuk menambah data yakni menambah data semua field atau menambah data pada field tertentu. </p>
+                          <ol>
+                            <li>Menambah data pada semua field</li>
+                              <p>Bentuk umum perintah SQL untuk menambahkan record atau data ke dalam suatu tabel adalah sebagai berikut :
+                                <br>
+                                <mark><b>Insert into nama_tabel values (‘nilai1’,’nilai2’,…);</b></mark><br>
+                                Contoh perintah untuk menambah data siswa pada tabel siswa sebagai berikut :<br>
+                                <b>Insert into siswa values (‘Budi’,’11’,’RPL’);</b><br>
+                                <img src="assets/images/materi4-1.png" alt="materi">
+                              </p>
+                            <li>Menambahkan data pada field tertentu</li>
+                               <p>Jika ingin menambahkan data pada field tertentu dapat menggunakan perintah sql sebagai berikut :<br>
+                                <mark><b>INSERT INTO nama_tabel (field1,field2) VALUES (‘nilai1’,’nilai2’);</b></mark><br>
+                                Contoh perintah untuk menambah data nama siswa pada tabel siswa sebagai berikut : <br>
+                               <b>Insert into siswa (nama_siswa) values (‘Budi’);</b><br>
+                               <img src="assets/images/materi4-2.png" alt="materi">
+                               </p>
+                          </ol>
+                          </div>
+                      </div>
+
+                      <div class="col-lg-12">
+                        <div class="materiddl">
+                          <h5>Mengubah Data</h5>
+                          <p>Mengubah atau mengedit data pada mysql menggunakan perintah update. Jika terdapat kesalahan pada data dapat menggunakan perintah update untuk memperbaikinya. 
+                            Proses update ini tidak menambahkan data (record) baru, tetapi memperbaiki data yang lama. 
+                            Perubahan yang terjadi dalam proses update bersifat permanen, artinya setelah perintah dijalankan tidak dapat di-cancel (undo). <br>
+                            Bentuk umum perintah SQL untuk mengedit suatu record atau data dari suatu tabel adalah sebagai berikut : <br>
+                            <mark><b>UPDATE nama_tabel SET field1=’nilai1’, field2=’nilai2’ where ;</b></mark><br>
+                            Note : jika where tidak ditambahkan pada perintah update maka semua record dalam tabel bersangkutan akan berubah<br>
+                            Contoh perintah untuk mengubah data kelompok jajan menjadi snek :<br>
+                            <img src="assets/images/materi4-update1.png" alt="materi"> hasilnya<br>
+                            Contoh perintah untuk mengubah semua data kelompok menjadi makanan :<br>
+                            <img src="assets/images/materi4-update2.png" alt="materi">
+                          </p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12">
+                          <div class="materiddl">
+                            <h5>Menghapus Data</h5>
+                            <p>Menghapus data adalah menghilangkan satu atau beberapa record data dari suatu tabel. Perintah yang digunakan untuk menghapus adalah Delete. 
+                              Proses delete dilakukan jika terdapat data atau record dalam suatu tabel yang perlu dihapus atau dihilangkan. Perubahan yang terjadi dalam proses delete bersifat permanen, artinya setelah perintah dijalankan tidak dapat di-cancel (undo).<br>
+                              Bentuk umum perintah SQL untuk menghapus suatu record atau data dari suatu tabel adalah sebagai berikut <br>
+                              <mark><b>DELETE FROM nama_tabel where ;</b></mark><br>
+                              Note : jika where tidak ditambahkan pada perintah delete maka semua record dalam tabel bersangkutan <br>
+                              Contoh perintah untuk menghapus data kelompok yang memiliki ber-id 5 : <br>
+                              <img src="assets/images/materi4-delete1.png" alt="materi"> hasilnya<br>
+                            </p>
+                              </div>
+                          </div>
+                      
+                    <div class="col-lg-12">
+                      <div class="materiddl">
+                        <h5>Mengubah Struktur Tabel</h5>
+                            <ol>
+                              <li>Menambah field pada tabel</li>
+                                    <p>Menambah field dapat diartikan sebagai langkah untuk menyisipkan field baru pada sebuah tabel. Untuk melakukan penambahan field maka alter option yang digunakan adalah ADD.  Perintah yang digunakan untuk menambah field pada tabel adalah<br>
+                                      <b>Alter table nama_tabel add nama_field tipe data (size);</b><br>
+                                      Contoh perintah untuk menambah field pada tabel :<br>
+                                      <b>Alter table film add jenis_film varchar (25);</b>
+                                    </p>
+                                  <li>Menghapus field pada tabel</li>
+                                  <p>Pada pembuatan database pasti terdapat kesalahan seperti pada field tabel yang berlebihan dan lain-lain. Untuk melakukan penghapusan field maka alter option yang digunakan adalah DROP. Perintah yang digunakan untuk menghapus field pada tabel adalah 
+                                    <br><b>Alter table nama_tabel drop nama_field;</b><br>
+                                    Contoh perintah untuk menghapus field pada tabel :<br>
+                                    <b>Alter table film drop jenis_film ;</b>
+                                    </p>
+                                    <li>Mengganti nama field</li>
+                                    <p>Jika terdapat kesalahan penulisan field dapat dirubah dengan menggunakan menggunakan alter option CHANGE. Perintah yang digunakan untuk mengganti nama field pada tabel adalah<br>
+                                      <b>Alter table nama_tabel change field_lama field_baru tipe data;</b><br>
+                                      Contoh perintah untuk mengganti field pada tabel :<br>
+                                      <b>Alter table film change judul judul_film varchar (25);</b>
+                                    </p>
+                                    <li>Mengganti tipe data</li>
+                                    <p>Jika terdapat kesalahan tipe data pada field dapat dirubah dengan menggunakan alter option MODIFY. Perintah yang digunakan untuk mengganti tipe data field pada tabel adalah <br>
+                                      <b>Alter table nama_tabel modify nama_field tipe data;</b><br>
+                                      Contoh perintah untuk mengganti field pada tabel :<br>
+                                      <b>Alter table film modify judul_film varchar (25);</b>
+                                    </p>
+                                  <li>Mengganti nama tabel</li>
+                                  <p>Untuk mengubah nama tabel dapat menggunakan alter option RENAME. Perintah yang digunakan untuk mengubah nama tabel adalah  
+                                    <br><b>Alter table tabel_lama rename to tabel_baru;</b> atau <b>rename table tabel_lama to tabel_baru;</b><br>
+                                    Contoh perintah untuk mengganti field pada tabel :<br>
+                                    <b>Alter table filem rename to film;<br>
+                                      Rename table filem to film;</b>
+                                    </p>
+                                    <li>Menambahkan primary key</li>
+                                    <p>Jika ingin menambah primary key pada suatu tabel dapat menggunakan alter dengan option ADD PRIMARY KEY. Perintah yang digunakan untuk menambahkan primary key adalah <br>
+                                      <b>Alter table nama_tabel add primary key (nama_field);</b><br>
+                                      Contoh perintah untuk menambahkan primary key pada tabel :<br>
+                                      <b>Alter table film add primary key (id_film);</b>
+                                    </p>
+                                    <li>Menghapus primary key</li>
+                                    <p>Jika ingin menghapus primary key pada suatu tabel dapat menggunakan alter dengan option DROP PRIMARY KEY. Perintah yang digunakan untuk menghapus primary key adalah <br>
+                                      <b>Alter table nama_tabel drop primary key;</b><br>
+                                      Contoh perintah untuk menambahkan primary key pada tabel :<br>
+                                      <b>Alter table film drop primary key;</b>
+                                    </p>
+                            </ol>
+                          </div>
+                        </div>
+
+                  <!--Pembatas-->
+                    <div class="col-lg-12">
+                      <div class="share">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            <div class="col-lg-12">
+              <div class="main-button-red">
+                <a href="materi.html">Kembali</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <p>© Naila Febrianti PTI 19 A 2022 
+          <br>Website Pembelajaran Mata Pelajaran Basis Data </p>
+    </div>
+  </section>
+
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/isotope.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/lightbox.js"></script>
+    <script src="assets/js/tabs.js"></script>
+    <script src="assets/js/video.js"></script>
+    <script src="assets/js/slick-slider.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script>
+        //according to loftblog tut
+        $('.nav li:first').addClass('active');
+
+        var showSection = function showSection(section, isAnimate) {
+          var
+          direction = section.replace(/#/, ''),
+          reqSection = $('.section').filter('[data-section="' + direction + '"]'),
+          reqSectionPos = reqSection.offset().top - 0;
+
+          if (isAnimate) {
+            $('body, html').animate({
+              scrollTop: reqSectionPos },
+            800);
+          } else {
+            $('body, html').scrollTop(reqSectionPos);
+          }
+
+        };
+
+        var checkSection = function checkSection() {
+          $('.section').each(function () {
+            var
+            $this = $(this),
+            topEdge = $this.offset().top - 80,
+            bottomEdge = topEdge + $this.height(),
+            wScroll = $(window).scrollTop();
+            if (topEdge < wScroll && bottomEdge > wScroll) {
+              var
+              currentId = $this.data('section'),
+              reqLink = $('a').filter('[href*=\\#' + currentId + ']');
+              reqLink.closest('li').addClass('active').
+              siblings().removeClass('active');
+            }
+          });
+        };
+
+        $('.main-menu, .responsive-menu, .scroll-to-section').on('click', 'a', function (e) {
+          e.preventDefault();
+          showSection($(this).attr('href'), true);
+        });
+
+        $(window).scroll(function () {
+          checkSection();
+        });
+    </script>
+</body>
+
+
+  </body>
+
+</html>
